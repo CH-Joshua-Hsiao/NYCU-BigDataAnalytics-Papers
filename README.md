@@ -6,13 +6,13 @@
 
 | 代號 | 論文 | 會議 | 程式碼 |
 |---|---|---|---|
-| Paper A | Modeling Stage-wise Evolution of User Interests for News Recommendation（`2603.10471v1.pdf`） | WWW '26 | [yikeJin/SEIN](https://github.com/yikeJin/SEIN) |
-| Paper B | LISRec: Modeling User Preferences with Learned Item Shortcuts for Sequential Recommendation（`3770854.3780337.pdf`） | KDD '26 | [NEUIR/LISRec](https://github.com/NEUIR/LISRec) |
+| Paper A | LISRec: Modeling User Preferences with Learned Item Shortcuts for Sequential Recommendation（`3770854.3780337.pdf`） | KDD '26 | [NEUIR/LISRec](https://github.com/NEUIR/LISRec) |
+| Paper B | Modeling Stage-wise Evolution of User Interests for News Recommendation（`2603.10471v1.pdf`） | WWW '26 | [yikeJin/SEIN](https://github.com/yikeJin/SEIN) |
 
 兩篇論文都在探討同一個問題：使用者的互動紀錄能多準確地反映真正的喜好？
 
-- **Paper A（時間）**：使用者興趣會隨時間改變。以全域圖捕捉長期偏好，再把歷史切成時段子圖，用 LSTM 與 self-attention 建模興趣演變。
-- **Paper B（語意）**：歷史紀錄中有隨手點擊的雜訊。以物品文字語意建立個人化相似度圖，只保留最大連通分量作為「捷徑」來建模使用者。
+- **Paper A（語意）**：歷史紀錄中有隨手點擊的雜訊。以物品文字語意建立個人化相似度圖，只保留最大連通分量作為「捷徑」來建模使用者。
+- **Paper B（時間）**：使用者興趣會隨時間改變。以全域圖捕捉長期偏好，再把歷史切成時段子圖，用 LSTM 與 self-attention 建模興趣演變。
 
 ## 檔案說明
 
@@ -21,7 +21,9 @@
 | `make_slides.py` | 從兩篇 PDF 裁切圖表，並產生 16:9 投影片 |
 | `講稿.md` | 約 15 分鐘的中文講稿，每張投影片一段，附建議時間 |
 | `paper_presentation.pptx` | 產生好的投影片（13 張，備忘稿已放入講稿） |
-| `figs/` | 從論文裁切出的圖與表 |
+| `LISRec_詳解.pdf` | Paper A（LISRec）的中文詳解 |
+| `StageWise新聞推薦_詳解.pdf` | Paper B（Stage-wise 新聞推薦）的中文詳解 |
+| `figs/` | 從論文裁切出的圖與表（`a_` 開頭為 Paper A，`b_` 開頭為 Paper B） |
 | `*.pdf` | 兩篇原始論文（CC BY 4.0） |
 
 ## 投影片大綱
@@ -29,12 +31,12 @@
 1. 標題
 2. 為什麼選這兩篇論文
 3. Paper A：問題與動機
-4. Paper A：模型架構
-5. Paper A：訓練目標與實驗設定
+4. Paper A：LISRec 流程
+5. Paper A：案例分析
 6. Paper A：實驗結果
 7. Paper B：問題與動機
-8. Paper B：LISRec 流程
-9. Paper B：案例分析
+8. Paper B：模型架構
+9. Paper B：訓練目標與實驗設定
 10. Paper B：實驗結果
 11. 兩篇比較
 12. 總結與討論
